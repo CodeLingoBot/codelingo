@@ -1,0 +1,34 @@
+funcs:
+  - name: incorrectComment
+    type: asserter
+    body: |
+      function (fname, comment) {
+        var str = comment.substring(2, comment.length);
+        var arr = str.split(" ");
+        var i = 0;
+        var first = arr[i]
+        while (first === "") {
+          i++;
+          first = arr[i];
+        }
+
+        return (comment[comment.length -1] !== '.') || (first !== fname);
+      }
+tenets:
+  - name: comment_sentences
+    flows:
+      codelingo/review:
+        comment: Comment must be a full sentence.
+    query: |
+      import (
+        codelingo/ast/go
+      )
+
+      go.func_decl(depth = any):
+        go.comment_group:
+          @review comment
+          go.comment:
+            text as commentText
+        go.ident:
+          name as fname
+          incorrectComment(fname, commentText)

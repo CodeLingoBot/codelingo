@@ -1,0 +1,26 @@
+[
+  {
+   "Comment": "Comment must be a full sentence.",
+   "Filename": "example.go",
+   "Line": 17,
+   "Snippet": "}\n\n// doThis is bad.\nfunc doThat() {\n\treturn"
+  },
+  {
+   "Comment": "Comment must be a full sentence.",
+   "Filename": "example.go",
+   "Line": 33,
+   "Snippet": "func Encode() {}\n\n// doWhat is bad\nfunc doWhat() {\n\treturn"
+  },
+  {
+   "Comment": "Comment must be a full sentence.",
+   "Filename": "example.go",
+   "Line": 22,
+   "Snippet": "}\n\n//doThis is bad.\nfunc doWhat() {\n\treturn"
+  },
+  {
+   "Comment": "Comment must be a full sentence.",
+   "Filename": "example.go",
+   "Line": 30,
+   "Snippet": "type Request struct{}\n\n// Writes the JSON encoding of req to w. This is Badd!\nfunc Encode() {}\n"
+  }
+ ]
