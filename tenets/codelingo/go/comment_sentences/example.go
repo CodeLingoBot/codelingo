@@ -11,6 +11,13 @@ func doThis() {
 
 //doThis2 is good.
 func doThis2() {
+	// internal comment
+	return
+}
+
+//doThis3 is good,
+//really good.
+func doThis3() {
 	return
 }
 
